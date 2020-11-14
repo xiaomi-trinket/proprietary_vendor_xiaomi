@@ -187,17 +187,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "colorservice",
-	owner: "xiaomi",
-	apk: "proprietary/product/app/colorservice/colorservice.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	product_specific: true,
-}
-
-android_app_import {
 	name: "datastatusnotification",
 	owner: "xiaomi",
 	apk: "proprietary/product/app/datastatusnotification/datastatusnotification.apk",
@@ -267,6 +256,17 @@ android_app_import {
 }
 
 android_app_import {
+	name: "colorservice",
+	owner: "xiaomi",
+	apk: "proprietary/system_ext/app/colorservice/colorservice.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
 	name: "WfdService",
 	owner: "xiaomi",
 	apk: "proprietary/system_ext/priv-app/WfdService/WfdService.apk",
@@ -287,7 +287,8 @@ dex_import {
 dex_import {
 	name: "com.qti.snapdragon.sdk.display",
 	owner: "xiaomi",
-	jars: ["proprietary/framework/com.qti.snapdragon.sdk.display.jar"],
+	jars: ["proprietary/product/framework/com.qti.snapdragon.sdk.display.jar"],
+	product_specific: true,
 }
 
 dex_import {
